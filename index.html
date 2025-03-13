@@ -55,6 +55,7 @@
     <audio id="audio1" src="articulos_esp.mp3"></audio>
     <audio id="audio2" src="articulos_ingl.mp3"></audio>
     <audio id="audio3" src="articulos_fran.mp3"></audio>
+    <audio id="audio4" src="articulos_port.mp3"></audio>
     
     <script>
         let audios = [];
@@ -67,7 +68,12 @@
                 return;
             }
 
-            audios = [document.getElementById('audio1'), document.getElementById('audio2'), document.getElementById('audio3')];
+            audios = [
+                document.getElementById('audio1'),
+                document.getElementById('audio2'),
+                document.getElementById('audio3'),
+                document.getElementById('audio4')
+            ];
             index = 0;
             reproduciendo = true;
             document.getElementById('controlButton').textContent = "Stop";
