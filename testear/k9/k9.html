@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproducir Audios Secuencialmente</title>
+    <script src="./header/header.js"></script>
+
+</head>
+<body>
+
+    <header id="header-container"></header>
+
+    <button id="controlButton" onclick="iniciarReproduccion()">Reproducir</button>
+    
+    <audio id="audio1" src="articulos_esp.mp3"></audio>
+    <audio id="audio2" src="articulos_ingl.mp3"></audio>
+    <audio id="audio3" src="articulos_fran.mp3"></audio>
+    <audio id="audio4" src="articulos_port.mp3"></audio>
+    
+    <script>
+        let audios = [];
+        let index = 0;
+        let reproduciendo = false;
+
+        function iniciarReproduccion() {
+            if (reproduciendo) {
+                detenerReproduccion();
+                return;
+            }
+
+            audios = [
+                document.getElementById('audio1'),
+                document.getElementById('audio2'),
+                document.getElementById('audio3'),
+                document.getElementById('audio4')
+            ];
+            index = 0;
+            reproduciendo = true;
+            document.getElementById('controlButton').textContent = "Stop";
+
+            reproducirSecuencialmente();
+        }
+
+        function reproducirSecuencialmente() {
+            if (!reproduciendo) return;
+
+            let audioActual = audios[index];
+            audioActual.currentTime = 0;
+            audioActual.play();
+
+            audioActual.onended = function() {
+                index++;
+                if (index < audios.length) {
+                    reproducirSecuencialmente();
+                } else {
+                    index = 0;
+                    reproducirSecuencialmente();
+                }
+            };
+        }
+
+        function detenerReproduccion() {
+            reproduciendo = false;
+            audios.forEach(audio => {
+                audio.pause();
+                audio.currentTime = 0;
+            });
+            document.getElementById('controlButton').textContent = "Reproducir Audios";
+        }
+    </script>
+</body>
+</html>
