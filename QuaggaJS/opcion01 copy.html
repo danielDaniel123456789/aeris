@@ -4,47 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Escanear Código de Barras y QR</title>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
     <h2>Escanear Código</h2>
-    <button id="scanButton">Escanear</button>
-    <video id="video" autoplay style="display:none;"></video>
+    <video id="video" autoplay></video>
     <p id="output">Código: <span></span></p>
 
     <script>
         async function startScanner() {
             if (!('BarcodeDetector' in window)) {
-                Swal.fire("Error", "Tu navegador no soporta BarcodeDetector.", "error");
+                alert("Tu navegador no soporta BarcodeDetector.");
                 return;
             }
 
             const video = document.getElementById("video");
             const output = document.getElementById("output").querySelector("span");
+
+            // Acceder a la cámara
             const stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" } });
             video.srcObject = stream;
-            video.style.display = "block";
 
+            // Crear detector
             const barcodeDetector = new BarcodeDetector({ formats: ["qr_code", "code_128", "ean_13"] });
 
-            const interval = setInterval(async () => {
+            setInterval(async () => {
                 const track = stream.getVideoTracks()[0];
                 const imageCapture = new ImageCapture(track);
                 const bitmap = await imageCapture.grabFrame();
-                
+
                 const barcodes = await barcodeDetector.detect(bitmap);
                 if (barcodes.length > 0) {
                     output.textContent = barcodes[0].rawValue;
                     console.log("Código detectado:", barcodes[0].rawValue);
-                    Swal.fire("Código detectado", barcodes[0].rawValue, "success");
-                    clearInterval(interval);
-                    video.srcObject.getTracks().forEach(track => track.stop());
-                    video.style.display = "none";
                 }
             }, 1000);
         }
 
-        document.getElementById("scanButton").addEventListener("click", startScanner);
+        startScanner();
     </script>
 </body>
 </html>
