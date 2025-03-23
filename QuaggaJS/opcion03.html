@@ -1,0 +1,19 @@
+<script src="https://rawgit.com/sitepoint-editors/jsqrcode/master/src/qr_packed.js"></script>
+<input type="file" accept="image/*" onchange="readQR(this)">
+
+<script>
+function readQR(input) {
+    const file = input.files[0];
+    const reader = new FileReader();
+
+    reader.onload = function() {
+        qrcode.decode(reader.result);
+    };
+
+    reader.readAsDataURL(file);
+
+    qrcode.callback = function(result) {
+        alert("Código escaneado: " + result);
+    };
+}
+</script>

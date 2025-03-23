@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escanear Código de Barras y QR</title>
+</head>
+<body>
+    <h2>Escanear Código</h2>
+    <video id="video" autoplay></video>
+    <p id="output">Código: <span></span></p>
+
+    <script>
+        async function startScanner() {
+            if (!('BarcodeDetector' in window)) {
+                alert("Tu navegador no soporta BarcodeDetector.");
+                return;
+            }
+
+            const video = document.getElementById("video");
+            const output = document.getElementById("output").querySelector("span");
+
+            // Acceder a la cámara
+            const stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" } });
+            video.srcObject = stream;
+
+            // Crear detector
+            const barcodeDetector = new BarcodeDetector({ formats: ["qr_code", "code_128", "ean_13"] });
+
+            setInterval(async () => {
+                const track = stream.getVideoTracks()[0];
+                const imageCapture = new ImageCapture(track);
+                const bitmap = await imageCapture.grabFrame();
+
+                const barcodes = await barcodeDetector.detect(bitmap);
+                if (barcodes.length > 0) {
+                    output.textContent = barcodes[0].rawValue;
+                    console.log("Código detectado:", barcodes[0].rawValue);
+                }
+            }, 1000);
+        }
+
+        startScanner();
+    </script>
+</body>
+</html>
