@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escáner de Código de Barras</title>
+    <script src="https://serratus.github.io/quaggaJS/examples/js/quagga.min.js"></script>
+</head>
+<body>
+    <h2>Escanear Código de Barras</h2>
+    <video id="preview"></video>
+    <p id="result">Código: <span></span></p>
+
+    <script>
+        Quagga.init({
+            inputStream: {
+                name: "Live",
+                type: "LiveStream",
+                target: document.querySelector("#preview"), // Elemento de video
+                constraints: {
+                    width: 480,
+                    height: 320,
+                    facingMode: "environment" // Usa la cámara trasera
+                }
+            },
+            decoder: {
+                readers: ["code_128_reader", "ean_reader", "ean_8_reader", "upc_reader"] // Tipos de códigos de barras
+            }
+        }, function(err) {
+            if (err) {
+                console.error("Error al iniciar QuaggaJS:", err);
+                return;
+            }
+            Quagga.start();
+        });
+
+        Quagga.onDetected(function(result) {
+            document.querySelector("#result span").textContent = result.codeResult.code;
+            console.log("Código detectado:", result.codeResult.code);
+            Quagga.stop(); // Detiene el escaneo después de detectar un código
+        });
+    </script>
+</body>
+</html>
