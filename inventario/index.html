@@ -18,18 +18,46 @@
         #content {
             display: none;
         }
+       
+
+            #btnInicio {
+                  position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+                font-size: 30px;
+       
+                }
+                
+                #imagenFondo{
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                }
+
+                #header{
+                 height: 100px;
+                 padding-top: 20px;
+                }
     </style>
 </head>
 <body>
     <div class="container text-center">
         <div id="showContent">
-<img src="inicio.png" alt="">
-<button class="btn btn-primary" >Control de Inventario </button>
+            <button class="btn btn-danger" id="btnInicio">
+                Aeropuerto Internacional Juan Santamaría 
+            </button>
+<img src="img7.jpg" id="imagenFondo">
+
         </div>
     
-        <div id="content" class="mt-4">
-
-            <h1  class="text-primary">Control de Inventario</h1>
+        <div id="content" >
+<div id="header" class="container-fluid bg-danger text-white">
+    <h1  class="text-white ">Control de Inventario</h1>
+</div>
+          
             <div class="row mb-3">
                 <div class="col-md-4">
                     <img src="01.png" class="img-fluid rounded shadow" alt="Imagen 1">
@@ -71,7 +99,7 @@
                 <div class="col-md-6">
                     <div class="card shadow p-3">
                         <h3 class="text-primary">Costos y Mantenimiento</h3>
-                        <p>El desarrollo es gratuito, pero se cobrará una tarifa mensual de ₢15,000 para mantenimiento, además del costo anual del servidor de $70.</p>
+                        <p>El desarrollo es gratuito, pero se cobrará una tarifa mensual de ₢15,000, además del costo anual del servidor de $70, eso monto le tocaria a la empresa pagarlo por año.</p>
                     </div>
                 </div>
             </div>
@@ -81,6 +109,11 @@
                     <div class="card shadow p-3">
                         <h3 class="text-primary">Funcionamiento del Control de Inventario</h3>
                         <h4  class="text-primary">Acceso Delegado</h4>
+                        <p class="text-danger">
+                            Solo personas de confianza podrán entrar a la bodega, para así localizar responsables
+                            <img src="img5.png" alt="" width="20%">
+                          </p>
+                        <span>Solo personas de confiaza podran entrar a la bodega </span>
                         <p>El encargado de la bodega es la única persona que tiene la llave. Cuando otra persona, como Lucas o María, necesite acceso, el encargado podrá delegar el acceso presionando un botón en la aplicación (por ejemplo, "Prestar llave a Lucas").</p>
                         <h4  class="text-primary">Registro de Responsabilidad</h4>
                         <p>Cuando el encargado le presta la llave a Lucas, la responsabilidad sobre los artículos y el inventario pasa a Lucas. Esto queda registrado en la aplicación en tiempo real.</p>
