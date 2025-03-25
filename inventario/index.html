@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto de Control de Inventario</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .card {
+            border-radius: 10px;
+        }
+        #content {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container text-center">
+        <div id="showContent">
+<img src="inicio.png" alt="">
+<button class="btn btn-primary" >Control de Inventario </button>
+        </div>
+    
+        <div id="content" class="mt-4">
+
+            <h1  class="text-primary">Control de Inventario</h1>
+            <div class="row mb-3">
+                <div class="col-md-4">
+                    <img src="01.png" class="img-fluid rounded shadow" alt="Imagen 1">
+                </div>
+                <div class="col-md-4">
+                    <img src="02.png" class="img-fluid rounded shadow" alt="Imagen 2">
+                </div> 
+                <div class="col-md-4">
+                    <img src="03.png" class="img-fluid rounded shadow" alt="Imagen 3">
+                </div>
+            </div>
+           
+            <div class="row" id="contenido">
+                <div class="col-md-6">
+                    <div class="card shadow p-3">
+                        <h3 class="text-primary">Descripción del Funcionamiento</h3>
+                        <p>El sistema permitirá escanear códigos de barras para visualizar el inventario en tiempo real. Se podrán registrar entradas y salidas de mercancía de forma inmediata.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card shadow p-3">
+                        <h3 class="text-primary">Responsabilidad de Gestión</h3>
+                        <p>El encargado de la bodega será el único responsable del stock y deberá justificar cualquier discrepancia.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Agregando el nuevo texto aquí, sin eliminar el anterior -->
+        
+
+            <!-- El contenido anterior sigue intacto -->
+            <div class="row mt-3">
+                <div class="col-md-6">
+                    <div class="card shadow p-3">
+                        <h3 class="text-primary">Acceso y Seguridad</h3>
+                        <p>El acceso será delegado por el encargado. Se enviarán alertas en tiempo real para monitoreo eficiente.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card shadow p-3">
+                        <h3 class="text-primary">Costos y Mantenimiento</h3>
+                        <p>El desarrollo es gratuito, pero se cobrará una tarifa mensual de ₢15,000 para mantenimiento, además del costo anual del servidor de $70.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-3">
+                <div class="col-md-12">
+                    <div class="card shadow p-3">
+                        <h3 class="text-primary">Funcionamiento del Control de Inventario</h3>
+                        <h4  class="text-primary">Acceso Delegado</h4>
+                        <p>El encargado de la bodega es la única persona que tiene la llave. Cuando otra persona, como Lucas o María, necesite acceso, el encargado podrá delegar el acceso presionando un botón en la aplicación (por ejemplo, "Prestar llave a Lucas").</p>
+                        <h4  class="text-primary">Registro de Responsabilidad</h4>
+                        <p>Cuando el encargado le presta la llave a Lucas, la responsabilidad sobre los artículos y el inventario pasa a Lucas. Esto queda registrado en la aplicación en tiempo real.</p>
+                        <h4  class="text-primary">Devolución de la Llave</h4>
+                        <p>Cuando Lucas devuelve la llave, la aplicación registra el cambio de responsabilidad de nuevo al encargado. Este seguimiento asegura que la persona que tiene la llave es siempre responsable de las acciones relacionadas con el inventario en ese momento.</p>
+                        <h4 class="text-primary">Control de Artículos</h4>
+                        <p>Cada vez que se ingrese un artículo (por ejemplo, azúcar), la persona que lo ingresa (como María) debe contar y validar la cantidad. La aplicación muestra la cantidad registrada en el sistema y se comparará con la cantidad real. Si no hay coincidencia, el sistema genera una alerta en tiempo real.</p>
+                        <h4  class="text-primary">Investigación de Discrepancias</h4>
+                        <p>Si se detecta una discrepancia, la aplicación notifica a los responsables y da inicio a una investigación sobre la causa de la diferencia. Esto ayuda a reducir las pérdidas y a identificar cualquier error o irregularidad de manera más eficiente.</p>
+                        <h4  class="text-primary">Alertas en Tiempo Real</h4>
+                        <p >Las alertas enviadas por la aplicación permiten monitorear en todo momento el estado del inventario y el acceso a las llaves, facilitando la gestión eficiente y la seguridad.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('showContent').addEventListener('click', function() {
+            document.getElementById('content').style.display = 'block';
+            document.getElementById('showContent').style.display = 'none';
+        });
+    </script>
+</body>
+</html>

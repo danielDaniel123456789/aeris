@@ -1,0 +1,21 @@
+Proyecto de Control de Inventario
+
+Descripción del Funcionamiento
+
+El sistema de control de inventario permitirá a los usuarios escanear el código de barras de un artículo para visualizar en tiempo real la cantidad total disponible en inventario desde su dispositivo móvil. Además, los usuarios podrán registrar de manera inmediata las entradas y salidas de mercancía, asegurando un control preciso y actualizado.
+
+Responsabilidad de la Gestión del Inventario
+
+La administración del inventario estará a cargo de una única persona responsable de la bodega, quien tendrá la obligación de justificar cualquier discrepancia en el stock. En caso de falta de un artículo, se deberá proporcionar una explicación clara y documentada.
+
+Si, por ejemplo, falta una caja de Coca-Cola, el encargado deberá detallar la razón de su ausencia para mantener la transparencia en la gestión.
+
+Acceso y Seguridad
+
+El encargado de la bodega podrá delegar el acceso a personas de confianza mediante el préstamo de llaves. Sin embargo, seguirá siendo el único responsable de cualquier pérdida o anomalía en el inventario. Para reforzar la seguridad, la aplicación proporcionará alertas en tiempo real, permitiendo un monitoreo constante y una gestión eficiente del inventario.
+
+Costos y Mantenimiento
+
+El desarrollo de la aplicación se realizará sin costo de programación. Sin embargo, se establecerá una tarifa mensual de uso de ₢15,000 para garantizar el mantenimiento y actualización del sistema.
+
+Adicionalmente, el pago del servidor se hará anualmente, con un costo aproximado de $70 por año.
