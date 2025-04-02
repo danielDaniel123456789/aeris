@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestión de Ventas y Envíos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .user-section {
+            display: none;
+        }
+        .user-section.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container py-5">
+        <div class="card shadow-lg">
+            <div class="card-header bg-primary text-white text-center">
+                <h2>Sistema de Gestión de Ventas y Envíos</h2>
+            </div>
+            <div class="card-body">
+                <h3>Elija su rol para comenzar:</h3>
+                <select id="userRole" class="form-select mb-3">
+                    <option value="vendedor">Vendedor</option>
+                    <option value="cajero">Cajero</option>
+                    <option value="mensajero">Mensajero</option>
+                    <option value="gerente">Gerente</option>
+                    <option value="administrador">Administrador</option>
+                </select>
+                <button class="btn btn-primary" id="enterBtn">Entrar</button>
+
+                <div class="user-section" id="vendedorSection">
+                    <h4>Vendedor - Acciones</h4>
+                    <button class="btn btn-success" onclick="registerOrder()">Registrar Pedido</button>
+                    <button class="btn btn-info" onclick="viewReports()">Ver Reportes de Ventas</button>
+                </div>
+
+                <div class="user-section" id="cajeroSection">
+                    <h4>Cajero - Acciones</h4>
+                    <button class="btn btn-primary" onclick="manageInventory()">Gestionar Inventario</button>
+                    <button class="btn btn-success" onclick="registerPayment()">Registrar Pago</button>
+                    <button class="btn btn-warning" onclick="generateReport()">Generar Reporte de Pagos</button>
+                </div>
+
+                <div class="user-section" id="mensajeroSection">
+                    <h4>Mensajero - Acciones</h4>
+                    <button class="btn btn-info" onclick="confirmDelivery()">Confirmar Entrega</button>
+                </div>
+
+                <div class="user-section" id="gerenteSection">
+                    <h4>Gerente - Acciones</h4>
+                    <button class="btn btn-secondary" onclick="viewAllReports()">Ver Todos los Reportes</button>
+                </div>
+
+                <div class="user-section" id="adminSection">
+                    <h4>Administrador - Acciones</h4>
+                    <button class="btn btn-danger" onclick="manageUsers()">Gestionar Usuarios</button>
+                    <button class="btn btn-dark" onclick="viewSystemReports()">Ver Reportes del Sistema</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simula el login y la carga de roles
+        document.getElementById('enterBtn').addEventListener('click', function() {
+            const role = document.getElementById('userRole').value;
+            localStorage.setItem('role', role);
+            loadUserRole();
+        });
+
+        // Cargar el rol del usuario desde localStorage
+        document.addEventListener("DOMContentLoaded", function() {
+            const savedRole = localStorage.getItem('role');
+            if (savedRole) {
+                document.getElementById('userRole').value = savedRole;
+                loadUserRole();
+            }
+        });
+
+        function loadUserRole() {
+            const role = localStorage.getItem('role');
+            
+            // Ocultar todas las secciones
+            const sections = document.querySelectorAll('.user-section');
+            sections.forEach(section => section.classList.remove('active'));
+
+            // Mostrar solo la sección correspondiente al rol
+            const activeSection = document.getElementById(`${role}Section`);
+            if (activeSection) {
+                activeSection.classList.add('active');
+            }
+        }
+
+        // Funciones para las acciones de cada rol
+
+        function registerOrder() {
+            alert('Pedido registrado por el Vendedor.');
+            // Aquí se puede agregar lógica para registrar un pedido en el sistema
+        }
+
+        function viewReports() {
+            alert('Mostrando reportes de ventas y envíos para el Vendedor.');
+            // Aquí se puede agregar lógica para mostrar reportes de ventas
+        }
+
+        function manageInventory() {
+            alert('Gestionando inventario por el Cajero.');
+            // Aquí se puede agregar lógica para gestionar inventario
+        }
+
+        function registerPayment() {
+            alert('Pago registrado por el Cajero.');
+            // Aquí se puede agregar lógica para registrar un pago
+        }
+
+        function generateReport() {
+            alert('Generando reporte de pagos y cuadre de mensajeros.');
+            // Aquí se puede agregar lógica para generar reportes
+        }
+
+        function confirmDelivery() {
+            alert('Confirmación de entrega realizada por el Mensajero.');
+            // Aquí se puede agregar lógica para confirmar una entrega
+        }
+
+        function viewAllReports() {
+            alert('Mostrando todos los reportes para el Gerente.');
+            // Aquí se puede agregar lógica para mostrar todos los reportes
+        }
+
+        function manageUsers() {
+            alert('Gestión de usuarios por el Administrador.');
+            // Aquí se puede agregar lógica para gestionar usuarios
+        }
+
+        function viewSystemReports() {
+            alert('Mostrando reportes del sistema para el Administrador.');
+            // Aquí se puede agregar lógica para mostrar reportes del sistema
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
