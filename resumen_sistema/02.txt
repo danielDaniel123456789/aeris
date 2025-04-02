@@ -1,0 +1,39 @@
+Este es el desglose de los roles y permisos de los usuarios en el sistema:
+
+1. Vendedores (Freelance y Tienda)
+Los vendedores tienen un acceso limitado, ya que solo pueden gestionar sus propias ventas. Sus funciones incluyen:
+✅ Registrar pedido → Pueden ingresar nuevos pedidos en el sistema.
+✅ Reportes de ventas por fecha → Pueden ver un historial de sus ventas, filtrando por fecha.
+✅ Reporte de envíos → Pueden ver el estado de los envíos relacionados con sus ventas.
+
+2. Cajero
+El cajero tiene más responsabilidades porque, además de registrar pedidos, maneja los ingresos y egresos de dinero en la tienda. Sus funciones incluyen:
+✅ Registrar pedido (editar) → Puede ingresar pedidos y también modificarlos si es necesario.
+✅ Registrar gastos (editar) → Puede agregar gastos de operación (por ejemplo, pago de mensajeros, compras de insumos, etc.).
+✅ Reportes de ventas por fecha → Puede ver todas las ventas del negocio, no solo las de un vendedor específico.
+✅ Reporte de envíos por fecha → Puede consultar envíos de cualquier vendedor, filtrando por fecha.
+✅ Vista y resúmenes del cuadre → Puede acceder a un resumen del cuadre de caja (dinero en efectivo, pagos con tarjeta, transferencias, etc.).
+✅ Reportes relación de pagos → Puede generar reportes sobre pagos realizados y recibidos.
+✅ Reportes cuadre mensajero → Puede ver cuánto dinero debe recibir cada mensajero al final del día.
+✅ Reporte impreso productos reposición → Puede imprimir un reporte con productos que necesitan reabastecimiento.
+✅ Inventario e ingreso de productos → Puede registrar nuevos productos en el inventario.
+✅ Registro y reporte de boletas de garantía, apartados → Puede registrar y consultar boletas de garantía y productos apartados por clientes.
+
+3. Mensajero
+Los mensajeros tienen acceso solo a las entregas asignadas a ellos. Sus funciones incluyen:
+✅ Resumen listo de pedidos (solo sus entregas) → Ven una lista con los pedidos que deben entregar.
+✅ Selección de confirmación de entrega y pago de pedido → Pueden confirmar la entrega y el tipo de pago recibido (efectivo, tarjeta, etc.).
+✅ Reporte cuadre mensajero → Al final del día, pueden ver un resumen con el total de los pedidos entregados y el dinero que deben reportar.
+
+4. Gerente
+El gerente tiene acceso a casi todas las funciones del sistema, excepto las relacionadas con costos y ganancias. Sus funciones incluyen:
+✅ Puede ver todos los pedidos, reportes y registros de la tienda.
+❌ No puede ver el costo de los productos en inventario.
+❌ No puede acceder a reportes de ganancias o utilidades del negocio.
+
+5. Administrador
+El administrador tiene acceso total al sistema, con la diferencia de que puede gestionar a los demás usuarios. Sus funciones incluyen:
+✅ Todas las opciones del sistema.
+✅ Puede editar, agregar o eliminar usuarios del sistema.
+
+En resumen, cada usuario tiene permisos específicos según su rol, y el administrador es el único que puede gestionar los accesos de los demás usuarios

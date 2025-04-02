@@ -1,0 +1,46 @@
+Registro de un Apartado – Explicación Detallada
+El apartado es una opción que permite a los clientes reservar productos pagando en cuotas o abonos hasta completar el total de la compra.
+
+1. Registro de un Apartado
+Cada apartado debe registrarse con la siguiente información:
+
+📌 Número de boleta de apartado → Un identificador único para el apartado.
+📌 Fecha → Día en que se registró el apartado.
+📌 Nombre del cliente → Quién está realizando el apartado.
+📌 Teléfono y dirección → Datos de contacto para seguimiento.
+📌 Vendedor → Quién registró el apartado (aunque la venta final solo se asigna cuando se completa el pago).
+📌 Productos → Lista de artículos apartados.
+📌 Fechas y formas de pago (abonos) → Registro de los pagos parciales que el cliente va realizando.
+
+2. Finalización del Apartado
+Cuando el cliente completa el pago total, el sistema permite:
+✅ Generar un ticket de compra si la entrega es en tienda.
+✅ Generar un pedido si el cliente solicita envío.
+
+3. Asignación del Vendedor
+⚠ La venta solo se asigna oficialmente al vendedor cuando se genera el ticket de compra o pedido.
+
+Ejemplo:
+
+Un cliente aparta un teléfono con un primer abono.
+
+Otro vendedor procesa el último pago.
+
+La comisión o registro de venta se asigna al vendedor que genere el ticket de compra/pedido final.
+
+4. Reporte de Apartados
+El sistema permite generar reportes con información clave sobre los apartados registrados.
+
+🔹 Reporte por fecha → Ver apartados en un rango de fechas.
+🔹 Reporte por cliente → Identificar los clientes que han apartado productos.
+🔹 Reporte por vendedor → Ver cuántos apartados ha gestionado cada vendedor.
+🔹 Reporte de pagos → Mostrar abonos realizados y pendientes.
+
+Resumen del Proceso de Apartados
+1️⃣ Se registra el apartado con los datos del cliente, productos y pagos parciales.
+2️⃣ Cada abono se registra hasta completar el monto total.
+3️⃣ Al completar el pago, se genera el ticket de compra o pedido de envío.
+4️⃣ La venta se asigna oficialmente al vendedor que genera el ticket final.
+5️⃣ Se pueden generar reportes detallados de apartados y pagos.
+
+Esto permite tener control de los apartados, evitar errores en la asignación de ventas y garantizar una correcta gestión de pagos. ✅

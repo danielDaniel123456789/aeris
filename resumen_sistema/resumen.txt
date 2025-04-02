@@ -1,0 +1,66 @@
+📌 Resumen General del Sistema de Gestión de Ventas y Envíos
+Este sistema está diseñado para gestionar pedidos, ventas, inventario, envíos, pagos y garantías, permitiendo a los diferentes usuarios (vendedores, cajeros, mensajeros, gerentes y administradores) realizar tareas específicas según sus roles.
+
+1️⃣ Proceso de Envío de Pedidos
+🔹 Generación de guías por los vendedores con datos del cliente.
+🔹 Registro en el sistema por el encargado en tienda.
+🔹 Preparación del pedido y asignación a un mensajero.
+🔹 Entrega y confirmación de pago por el mensajero.
+🔹 Registro del pago y cierre de jornada con un resumen de envíos y pagos.
+
+2️⃣ Usuarios y Permisos del Sistema
+Cada usuario tiene funciones específicas:
+✅ Vendedores (freelance y en tienda): Registrar pedidos y ver sus reportes de ventas y envíos.
+✅ Cajero: Gestiona pedidos, registra gastos, administra inventario y genera reportes de pagos y cuadre de mensajeros.
+✅ Mensajero: Puede ver sus entregas asignadas y confirmar pagos.
+✅ Gerente: Tiene acceso a todas las funciones excepto ver costos de productos e informes de ganancias.
+✅ Administrador: Control total del sistema y edición de usuarios.
+
+3️⃣ Módulos Principales del Sistema
+📌 Ventas y Pedidos
+Registro de ventas en tienda o pedidos a domicilio.
+
+Asignación automática de número de ruta según el destino del pedido.
+
+Control de descuentos y cambios solo por gerentes o administradores.
+
+📌 Gestión de Garantías
+Registro de productos con problemas, incluyendo descripción de la falla y estado.
+
+Descuento automático de inventario en caso de cambios por garantía.
+
+Reportes de productos en garantía.
+
+📌 Apartados (Ventas a Plazos)
+Registro de boletas de apartado con datos del cliente, fechas y pagos parciales.
+
+Generación de ticket de compra o pedido una vez completado el pago.
+
+Reportes de apartados.
+
+📌 Inventario y Control de Productos
+Registro y administración de productos con categorías y códigos internos.
+
+Diferenciación de precios para ventas minoristas y mayoristas.
+
+Reportes de inventario y vinculación con futuras ventas en línea.
+
+📌 Control de Gastos y Pagos
+Registro de gastos en categorías como nómina, servicios, compras y pagos a mensajeros.
+
+Reportes detallados por tipo de gasto y fecha.
+
+📌 Inicio y Cierre de Caja
+Registro de efectivo inicial y saldo en cuenta bancaria.
+
+Cierre diario con resumen de ingresos y egresos.
+
+4️⃣ Beneficios del Sistema
+✔ Automatización del proceso de ventas y envíos → Mejora la eficiencia.
+✔ Control detallado de inventario y garantías → Evita pérdidas y optimiza la reposición de productos.
+✔ Registro de apartados y pagos → Permite ventas a plazos sin confusión.
+✔ Gestión financiera completa → Facilita la administración de ingresos y gastos.
+✔ Acceso según roles de usuario → Garantiza seguridad y control en el sistema.
+
+📌 Conclusión
+Este sistema centraliza y optimiza la gestión de ventas, inventario, envíos y pagos, asegurando un flujo de trabajo eficiente y permitiendo un control total de las operaciones comerciales. 🚀

@@ -1,0 +1,43 @@
+Sección de Garantías – Explicación Detallada
+La sección de garantías permite llevar un control de los productos que los clientes devuelven por defectos o fallas dentro del período de garantía.
+
+1. Registro de Garantía
+Cada garantía debe registrarse con la siguiente información:
+
+📌 Número de ticket → Un identificador único para cada garantía.
+📌 Fecha → Fecha en que se registró la solicitud de garantía.
+📌 Nombre del cliente → Quién está solicitando la garantía.
+📌 Teléfono y dirección → Contacto y ubicación del cliente en caso de necesitar seguimiento o devolución a domicilio.
+📌 Producto → Detalle del artículo en garantía.
+📌 Descripción de la falla → Explicación del problema reportado por el cliente.
+📌 Descripción del estado del producto → Se indica si el producto está en buen estado físico, si tiene daños visibles, etc.
+📌 Cómo se recibe el producto → Ejemplo: con caja original, sin accesorios, con signos de uso, etc.
+📌 Numeración → Un código interno para organizar los casos de garantía.
+📌 Fecha de entrega (solución) → Plazo estimado para resolver el problema (reparación o cambio).
+
+2. Descuento Automático del Inventario en Cambios de Garantía
+Si se realiza un cambio de producto por garantía, el sistema:
+✅ Automáticamente descuenta el nuevo producto del inventario.
+✅ Registra el movimiento en el historial del stock.
+
+Ejemplo:
+
+Un cliente devuelve un teléfono defectuoso y se le da uno nuevo en reemplazo.
+
+El sistema resta una unidad del inventario para reflejar la entrega del nuevo producto.
+3. Reporte de Garantías
+El sistema permite generar reportes con detalles de todas las garantías procesadas.
+
+🔹 Reporte por fecha → Ver cuántas garantías se registraron en un período determinado.
+🔹 Reporte por producto → Identificar qué productos tienen más problemas y evaluar su calidad.
+🔹 Reporte por cliente → Llevar un historial de clientes que han solicitado garantías.
+🔹 Reporte de soluciones → Ver si los productos se repararon, cambiaron o reembolsaron.
+
+Resumen del Proceso de Garantías
+1️⃣ Se registra el producto con los datos del cliente y la falla.
+2️⃣ Se guarda el estado del producto al recibirlo.
+3️⃣ Se asigna una numeración y fecha de entrega estimada.
+4️⃣ Si hay un cambio por garantía, el sistema descuenta automáticamente el producto nuevo del inventario.
+5️⃣ Se pueden generar reportes detallados de todas las garantías gestionadas.
+
+Esto ayuda a tener control total de las garantías, evitar pérdidas de inventario y mejorar la atención al cliente. 🚀

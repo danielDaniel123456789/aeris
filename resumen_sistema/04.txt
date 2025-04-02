@@ -1,0 +1,54 @@
+Aquí te explico el proceso de registrar una venta o pedido paso a paso:
+
+1. Iniciar Sesión
+El usuario debe ingresar al sistema con su cuenta.
+
+Según su rol (vendedor, cajero, gerente o administrador), tendrá diferentes permisos para realizar acciones.
+
+2. Selección del Tipo de Venta
+Venta en tienda → El cliente compra directamente en el establecimiento.
+
+Envío → La compra será enviada a la dirección del cliente mediante un mensajero o encomienda.
+
+3. Selección del Tipo de Vendedor
+Si el vendedor es freelance (online) o tienda, el sistema lo asigna automáticamente según el usuario.
+
+Solo un cajero, gerente o administrador puede cambiar el vendedor en caso de ser necesario (por ejemplo, si se ingresó mal el pedido).
+
+4. Selección del Tipo de Envío (si aplica)
+Mensajería Express → Envío rápido con un mensajero dedicado.
+
+Ruta → Envío programado dentro de una ruta preestablecida con otros pedidos.
+
+Encomienda → Para sitios retirados donde se usa un servicio de transporte externo.
+
+5. Generación de Proforma y Conversión a Venta Final
+Cuando se toma un pedido o se registra una venta, el documento inicial es una PROFORMA.
+
+Esto significa que el pedido aún no está confirmado y puede ser modificado antes de finalizar la venta.
+
+Luego, cuando se confirma la compra, la proforma se convierte en una factura o boleta de venta final.
+
+6. Numeración de Pedidos y Asignación de Ruta
+Para los pedidos que son enviados, el sistema genera automáticamente una numeración única.
+
+Al seleccionar el destino del envío, el sistema asigna un número de ruta, para organizar las entregas según la logística de reparto.
+
+7. Control de Productos y Comisión a Vendedores
+En cada venta, el sistema registra la cantidad de productos vendidos.
+
+Esto permite calcular cuánto ha vendido cada vendedor y así determinar los pagos o comisiones correspondientes.
+
+8. Control de Descuentos y Cambios Importantes
+Solo el gerente o el administrador pueden realizar descuentos o cambios relevantes en la venta.
+
+Esto evita que los vendedores hagan descuentos no autorizados o modifiquen datos críticos sin supervisión.
+
+Resumen
+1️⃣ El usuario inicia sesión y selecciona venta en tienda o envío.
+2️⃣ El sistema asigna el vendedor, pero solo un cajero, gerente o administrador puede cambiarlo.
+3️⃣ Si es un envío, se elige el tipo (express, ruta o encomienda).
+4️⃣ Se genera una proforma (documento temporal) que luego se convierte en venta final.
+5️⃣ El sistema asigna numeración y ruta automáticamente en los pedidos de envío.
+6️⃣ Se cuentan los productos vendidos para calcular comisiones.
+7️⃣ Los descuentos solo pueden ser autorizados por un gerente o administrador.

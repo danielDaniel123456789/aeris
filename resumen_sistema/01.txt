@@ -1,0 +1,30 @@
+El proceso de envío actual funciona de la siguiente manera:
+
+Creación de la guía de envío: Cada asesor de ventas llena un formato con los datos del pedido y lo envía a un grupo de WhatsApp, incluyendo la ubicación del cliente en Maps o Waze.
+
+Registro en el sistema: El encargado en la tienda recibe esta información y la ingresa en el sistema como una toma de pedido. Luego, se imprimen dos documentos:
+
+Ticket de compra: Comprobante de la transacción para el cliente.
+
+Boleta de envío: Documento que incluye el monto total, sumando el valor del producto y el costo de mensajería. Este proceso debería ser realizado directamente por cada vendedor, lo que implica que cada uno debe encargarse de gestionar correctamente su venta y su envío.
+
+Preparación del pedido: Se prepara el pedido en la tienda y se organiza junto con otros pedidos según la ruta de entrega.
+
+Asignación del mensajero: A cada pedido se le asigna un mensajero, quien recibe la información necesaria, como la guía de envío y la ubicación del cliente.
+
+Entrega y confirmación de pago:
+
+El mensajero entrega el pedido al cliente y confirma la forma de pago (efectivo, tarjeta, transferencia, etc.).
+
+Luego, el encargado en la tienda registra esta información en el sistema para el cuadre de caja.
+
+Reporte final y liquidación:
+
+Al final de la jornada, se genera un reporte o boleta con el resumen de todos los envíos realizados.
+
+Este documento detalla cuántos pedidos entregó cada mensajero y el monto total de los pagos que recibió.
+
+Con base en este reporte, se procede a pagarle a cada mensajero por sus servicios.
+
+
+Básicamente, este proceso asegura que cada pedido sea registrado correctamente, que los mensajeros tengan toda la información necesaria para la entrega, y que al final del día se pueda hacer un control de pagos y liquidación de envíos

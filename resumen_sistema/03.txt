@@ -1,0 +1,68 @@
+1. Inicio/Cierre de Caja
+Esta funcionalidad permite controlar el flujo de dinero en la caja al inicio y final del día.
+
+📌 Inicio de Caja:
+
+Ingreso de monto en efectivo de caja chica → Se registra cuánto dinero en efectivo hay en la caja chica al iniciar la jornada (por ejemplo, para dar vueltos).
+
+Ingreso de monto inicial del disponible en la cuenta (SINPE) → Se registra cuánto dinero hay en la cuenta bancaria disponible para pagos digitales (SINPE).
+
+📌 Cierre de Caja:
+
+Cierre con resúmenes y totales → Al final del día, se genera un reporte con todos los ingresos y egresos, mostrando el total en efectivo, transferencias, pagos con tarjeta, etc.
+
+2. Reposición de Productos
+Impresión de reporte sencillo diario → Este reporte muestra los productos vendidos en un período determinado.
+
+Detalle del producto y cantidad vendida, por selección de fecha → Se pueden seleccionar fechas específicas para generar un informe detallado de cuántas unidades de cada producto se han vendido, lo que permite saber qué productos necesitan reposición.
+
+3. Reporte de Entrada y Salida de Dinero
+Este módulo permite clasificar los movimientos financieros dentro del negocio.
+
+📌 Categorías principales:
+1️⃣ Gastos → Aquí se registran todos los gastos generales, como alquiler, servicios públicos, etc.
+2️⃣ Nómina → Pagos a empleados y freelancers.
+3️⃣ Compras → Compra de productos para reabastecimiento del inventario.
+4️⃣ Pago de encomiendas → Costos asociados al envío de productos mediante terceros (servicios de paquetería o transporte).
+5️⃣ Pago de mensajeros → Pago a los mensajeros que hacen las entregas.
+
+📌 Subcategorías dentro de cada una:
+Cada categoría puede tener subcategorías más específicas para un mejor control de los movimientos financieros. Ejemplo:
+
+🔹 Gastos
+
+Servicios públicos (agua, luz, internet)
+
+Alquiler de local
+
+Mantenimiento
+
+🔹 Nómina
+
+Pago de vendedores
+
+Pago de cajeros
+
+Pago de administradores
+
+🔹 Compras
+
+Reposición de inventario
+
+Insumos de oficina
+
+Material de empaque
+
+🔹 Pago de encomiendas
+
+Empresas de mensajería externas
+
+Costos de transporte especial
+
+🔹 Pago de mensajeros
+
+Pagos por jornada
+
+Pagos por entrega
+
+Este desglose permite un control más detallado del dinero que entra y sale del negocio, facilitando la contabilidad y la toma de decisiones.

@@ -1,0 +1,75 @@
+📌 Gestión de Gastos y Pagos – Explicación Detallada
+El sistema permite llevar un control detallado de los gastos y pagos, organizándolos en diferentes categorías para facilitar su administración y análisis.
+
+1️⃣ Control de Gastos por Categorías
+Los gastos estarán clasificados en categorías específicas para que el sistema pueda generar reportes detallados y organizar mejor la información financiera.
+
+🔹 Gastos operativos:
+
+Servicios públicos (agua, luz, internet, teléfono).
+
+Alquiler del local.
+
+Gastos de papelería y suministros.
+
+Mantenimiento de equipos y mobiliario.
+
+🔹 Nómina (Salarios y Pagos de Personal):
+
+Sueldos de empleados fijos (cajeros, gerentes, encargados de tienda).
+
+Comisiones de vendedores freelance.
+
+Pagos a mensajeros por entregas realizadas.
+
+🔹 Compras de Productos:
+
+Pago a proveedores por nueva mercancía.
+
+Costos de importación o envío de productos.
+
+🔹 Pago de Encomiendas y Mensajeros:
+
+Pago a empresas de transporte por envíos.
+
+Pagos a mensajeros internos o externos por cada entrega.
+
+2️⃣ Registro y Control de Gastos
+✅ Cada gasto registrado incluirá:
+
+Fecha del gasto.
+
+Categoría (ejemplo: servicios, nómina, compras, mensajeros).
+
+Subcategoría (ejemplo: si es un servicio, indicar si es electricidad, internet, etc.).
+
+Monto gastado.
+
+Método de pago (efectivo, transferencia, tarjeta).
+
+Persona o empresa a la que se pagó (Ejemplo: ICE, proveedor X, mensajero Y).
+
+Opcionalmente, se puede adjuntar una factura o comprobante digital.
+
+3️⃣ Reportes de Gastos y Pagos
+El sistema podrá generar reportes detallados de los gastos en función de:
+
+📊 Reporte por fecha → Para ver cuánto se gastó en un período específico.
+📊 Reporte por categoría → Para saber en qué se está gastando más dinero.
+📊 Reporte de nómina → Para conocer los pagos hechos a empleados y comisiones de vendedores.
+📊 Reporte de pagos a mensajeros → Para ver cuánto se ha pagado en entregas.
+
+📄 Los reportes podrán ser exportados en PDF o impresos.
+
+4️⃣ Beneficios del Control de Gastos
+✔ Evita fugas de dinero → Mantiene un registro claro de cada gasto.
+✔ Facilita la contabilidad → Los reportes permiten saber exactamente en qué se usa el dinero.
+✔ Mejora la administración de pagos → Se puede verificar que todos los empleados, proveedores y mensajeros hayan recibido su pago correctamente.
+
+✅ Resumen del Módulo de Gastos y Pagos
+1️⃣ Clasificación por categorías → Servicios, nómina, compras, encomiendas, etc.
+2️⃣ Registro detallado → Fecha, monto, método de pago, destinatario, y comprobante.
+3️⃣ Reportes organizados → Por fecha, categoría y tipo de pago.
+4️⃣ Optimización financiera → Mejor control del dinero para evitar pérdidas.
+
+📌 Este módulo ayuda a mantener un control financiero claro, asegurando que todos los pagos sean realizados correctamente y reduciendo gastos innecesarios. 🚀

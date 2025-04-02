@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumen del Sistema de Gestión</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container py-5">
+        <div class="card shadow-lg">
+            <div class="card-header bg-primary text-white text-center">
+                <h2>📌 Resumen General del Sistema de Gestión de Ventas y Envíos</h2>
+            </div>
+            <div class="card-body">
+                <p class="lead">Este sistema está diseñado para gestionar pedidos, ventas, inventario, envíos, pagos y garantías, permitiendo a los diferentes usuarios realizar tareas específicas según sus roles.</p>
+                
+                <h3 class="mt-4">1️⃣ Proceso de Envío de Pedidos</h3>
+                <ul class="list-group mb-3">
+                    <li class="list-group-item">🔹 Generación de guías por los vendedores con datos del cliente.</li>
+                    <li class="list-group-item">🔹 Registro en el sistema por el encargado en tienda.</li>
+                    <li class="list-group-item">🔹 Preparación del pedido y asignación a un mensajero.</li>
+                    <li class="list-group-item">🔹 Entrega y confirmación de pago por el mensajero.</li>
+                    <li class="list-group-item">🔹 Registro del pago y cierre de jornada con un resumen de envíos y pagos.</li>
+                </ul>
+
+                <h3 class="mt-4">2️⃣ Usuarios y Permisos del Sistema</h3>
+                <ul class="list-group mb-3">
+                    <li class="list-group-item">✅ <strong>Vendedores:</strong> Registrar pedidos y ver reportes de ventas y envíos.</li>
+                    <li class="list-group-item">✅ <strong>Cajero:</strong> Gestiona pedidos, registra gastos, administra inventario y genera reportes.</li>
+                    <li class="list-group-item">✅ <strong>Mensajero:</strong> Puede ver sus entregas asignadas y confirmar pagos.</li>
+                    <li class="list-group-item">✅ <strong>Gerente:</strong> Acceso total excepto a costos e informes de ganancias.</li>
+                    <li class="list-group-item">✅ <strong>Administrador:</strong> Control total del sistema y edición de usuarios.</li>
+                </ul>
+                
+                <h3 class="mt-4">3️⃣ Módulos Principales del Sistema</h3>
+                <div class="accordion" id="modulesAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#ventas">
+                                📌 Ventas y Pedidos
+                            </button>
+                        </h2>
+                        <div id="ventas" class="accordion-collapse collapse show" data-bs-parent="#modulesAccordion">
+                            <div class="accordion-body">
+                                Registro de ventas en tienda o pedidos a domicilio con asignación automática de ruta y control de descuentos.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#garantias">
+                                📌 Gestión de Garantías
+                            </button>
+                        </h2>
+                        <div id="garantias" class="accordion-collapse collapse" data-bs-parent="#modulesAccordion">
+                            <div class="accordion-body">
+                                Registro de productos con problemas, descuento automático de inventario y reportes de productos en garantía.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#apartados">
+                                📌 Apartados (Ventas a Plazos)
+                            </button>
+                        </h2>
+                        <div id="apartados" class="accordion-collapse collapse" data-bs-parent="#modulesAccordion">
+                            <div class="accordion-body">
+                                Registro de boletas de apartado, generación de ticket de compra al completar el pago y reportes detallados.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#inventario">
+                                📌 Inventario y Control de Productos
+                            </button>
+                        </h2>
+                        <div id="inventario" class="accordion-collapse collapse" data-bs-parent="#modulesAccordion">
+                            <div class="accordion-body">
+                                Registro y administración de productos, diferenciación de precios y reportes de inventario.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <h3 class="mt-4">4️⃣ Beneficios del Sistema</h3>
+                <ul class="list-group mb-3">
+                    <li class="list-group-item">✔ <strong>Automatización</strong> del proceso de ventas y envíos.</li>
+                    <li class="list-group-item">✔ <strong>Control detallado</strong> de inventario y garantías.</li>
+                    <li class="list-group-item">✔ <strong>Registro de apartados</strong> y pagos a plazos.</li>
+                    <li class="list-group-item">✔ <strong>Gestión financiera</strong> completa con reportes detallados.</li>
+                    <li class="list-group-item">✔ <strong>Acceso seguro</strong> según roles de usuario.</li>
+                </ul>
+                
+           
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

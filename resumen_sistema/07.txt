@@ -1,0 +1,70 @@
+Gestión de Inventario – Explicación Detallada
+El inventario es una parte fundamental del sistema, ya que permite llevar un control detallado de los productos disponibles, sus precios y movimientos (ingresos y salidas).
+
+📌 1. Datos del Inventario
+Cada producto registrado en el sistema contiene la siguiente información:
+
+🔹 Nombre del producto → Identificación del artículo.
+🔹 Cantidad → Número de unidades disponibles en stock.
+🔹 Código CABYS → Código fiscal obligatorio en Costa Rica para facturación electrónica.
+🔹 Código de control en tienda → Un identificador interno para facilitar la búsqueda y control del producto en tienda.
+🔹 Categoría → Permite organizar los productos según su tipo (Ejemplo: Electrónica, Ropa, Accesorios).
+🔹 Precio de Venta 1 → Precio normal de venta al público.
+🔹 Precio de Venta 2 → Precio al por mayor (para ventas en cantidad).
+🔹 Descuento sobre precio de venta → Campo editable para aplicar descuentos específicos a un producto.
+
+📌 2. Listado de Precios en PDF
+El sistema generará automáticamente dos tipos de listas de precios en formato PDF:
+
+📄 Lista de Precios de Venta (Ventas 1)
+
+Contiene los productos disponibles con el precio de venta normal.
+
+Organizado por categoría para facilitar la consulta.
+
+📄 Lista de Precios al Mayor (Ventas 2)
+
+Contiene los productos con el precio al por mayor.
+
+Organizado por categoría, similar a la lista de precios normal.
+
+🛠️ Ambos archivos pueden ser descargados o impresos para su uso en la tienda.
+
+📌 3. Control de Inventario
+🔹 Solo el administrador o gerente pueden ingresar, editar o eliminar productos del inventario.
+🔹 Acciones permitidas:
+✅ Agregar nuevos productos.
+✅ Editar información de productos existentes (nombre, precio, stock, etc.).
+✅ Eliminar productos en caso de que ya no se vendan.
+✅ Registrar la salida de productos cuando se vendan o se entreguen como garantía.
+
+📌 4. Impresión de Reportes de Inventario
+El sistema permite generar un reporte detallado del inventario con diferentes opciones:
+
+📊 Reporte de inventario con precios de costo y venta → Para analizar la rentabilidad de los productos.
+📊 Reporte de stock por categoría → Para ver qué productos están disponibles en cada sección.
+📊 Reporte de productos con stock bajo → Para identificar artículos que necesitan reposición.
+
+📄 Los reportes pueden imprimirse o descargarse en PDF.
+
+📌 5. Vinculación con Tienda en Línea (Fase Futura)
+En una etapa posterior, el inventario se podrá conectar con una tienda en línea para que:
+
+🌐 El stock se actualice automáticamente → Cuando un producto se venda en línea o en tienda.
+📦 Se pueda administrar desde un solo sistema → Evitando inconsistencias entre el inventario físico y el digital.
+🛒 Se publiquen productos automáticamente en la tienda en línea → Sin necesidad de ingresarlos manualmente.
+
+Ejemplo:
+1️⃣ Se vende un producto en tienda física → El stock se actualiza automáticamente en la tienda en línea.
+2️⃣ Se vende un producto en la tienda en línea → El sistema descuenta automáticamente del inventario físico.
+
+🔗 Esto permitirá mejorar la gestión y evitar errores en el control del stock.
+
+✅ Resumen del Inventario
+1️⃣ Registro detallado de productos con precios y categorías.
+2️⃣ Generación automática de listas de precios en PDF.
+3️⃣ Solo administradores y gerentes pueden modificar el inventario.
+4️⃣ Reportes de stock y productos con opción de impresión.
+5️⃣ Futura integración con tienda en línea para sincronización automática.
+
+📌 Con este sistema se garantiza un control eficiente del inventario, evitando pérdidas y errores en la gestión de productos. 🚀
