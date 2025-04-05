@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generar Código QR</title>
+    <!-- Incluimos la librería QRCode.js -->
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+    <!-- Incluimos Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+    #qrcode {
+          position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        border-style: none;
+      
+        padding-bottom: 20px;
+        border-radius: 8px;
+        }
+</style>
+<body class="container"  >
+
+    <div class="text-center">
+        <img src="aeris.jpeg" alt="">
+        <div class="text-center">
+            <div id="qrcode" class="mx-auto"></div>
+        </div>
+
+        <!-- Contenedor donde se mostrará el código QR -->
+
+    </div>
+
+    <script type="text/javascript">
+        // Crear el código QR con la URL proporcionada
+        var url = "https://danieldaniel123456789.github.io/aeris/migracionAeris/index.html";
+        var qrcode = new QRCode(document.getElementById("qrcode"), {
+            text: url,
+            width: 128,
+            height: 128
+        });
+    </script>
+
+    <!-- Incluimos el script de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
