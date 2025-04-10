@@ -9,6 +9,8 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="formulario.js"></script> <!-- Asegúrate de que este archivo exista -->
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
 
     <style>
         /* Estilos generales */
@@ -67,17 +69,25 @@
             #exito h1 {
                 font-size: 1.8rem; /* Reduce el tamaño del texto de la alerta en pantallas pequeñas */
             }
+
+            #exito {
+    display: none;
+}
+
         }
     </style>
 </head>
 
 <body>
-    <div id="exito" class="text-center" style="display: none;">
+    <div id="exito" class="container text-center" >
         <div class="centrarTitulo">
-            <h1>¡Pura Vida!</h1>
+          
         </div>
-
-        <img src="img01.jpg" alt="" id="imaegnFondo">
+<div class="d-flex justify-content-center align-items-center flex-column" >
+    <h1 class="text-primary">¡Pura Vida!</h1>
+    <div id="qrcode"></div>
+</div>
+     
     </div>
 
     <div class="container centered-container" id="contenido">
@@ -90,7 +100,7 @@
                 <option value="Estados Unidos">Estados Unidos</option>
                 <option value="Costa Rica">Costa Rica</option>
             </select>
-            <button class="btn btn-primary" onclick="mostrarAlerta()">Mostrar país</button>
+            <button class="btn btn-primary" onclick="mostrarAlerta()">Continuar</button>
         </div>
     </div>
 

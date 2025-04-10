@@ -108,53 +108,77 @@ const formulario = {
 
 // Modificar la función para que cargue las preguntas dependiendo del idioma seleccionado
 async function mostrarPreguntas(pais) {
-  const idioma = pais === 'Costa Rica' ? 'espanol' :
-                pais === 'Francia' ? 'frances' : 'ingles'; // Si el país es Costa Rica, usamos español, si es Francia, usamos francés, si no, inglés
-  const preguntas = formulario[idioma];  // Seleccionamos las preguntas correspondientes al idioma
-
-  const respuestas = {};
-  for (const clave in preguntas) {
-      const result = await Swal.fire({
-          title: preguntas[clave].pregunta || preguntas[clave].question, // Accedemos a la propiedad adecuada según el idioma
-          input: 'text',
-          inputPlaceholder: 'Escribe tu respuesta...',
-          showCancelButton: true,
-          allowOutsideClick: false,  // Desactivamos el clic fuera del modal
-          allowEscapeKey: false, // Desactivamos el cierre con tecla Escape
-          confirmButtonText: 'Siguiente',
-          cancelButtonText: 'Cancelar'
-      });
-
-      if (result.isDismissed) {
-          Swal.fire('Formulario cancelado', '', 'info');
-          return;
-      }
-
-      respuestas[clave] = result.value;
-  }
-
-  console.log("Respuestas:", respuestas);
-
-  let resumen = '';
-  for (const clave in respuestas) {
-      resumen += `<b>${preguntas[clave].pregunta || preguntas[clave].question}</b><br>${respuestas[clave]}<br><br>`;
-  }
-
- 
-
-  Swal.fire({
-    title: "Finalizar",
-    showConfirmButton: true,
-    confirmButtonText: "OK",
-  }).then((result) => {
-    if (result.isConfirmed) {
-   
-      document.getElementById("contenido").style.display = "none"; 
-      document.getElementById("exito").style.display = "block"; 
-    }
-  });
+    const idioma = pais === 'Costa Rica' ? 'espanol' :
+                  pais === 'Francia' ? 'frances' : 'ingles';
   
+    const preguntas = formulario[idioma];
+    const clavesSeleccionadas = idioma === 'espanol' ? ['propositoViaje', 'tiempoEstadia', 'hospedaje'] :
+                                idioma === 'frances' ? ['propositoViaje', 'tiempoEstadia', 'hospedaje'] :
+                                ['purposeOfTrip', 'lengthOfStay', 'accommodation']; // Para el inglés
+  
+    const respuestas = {};
+    for (const clave of clavesSeleccionadas) {
+        const result = await Swal.fire({
+            title: preguntas[clave].pregunta || preguntas[clave].question,
+            input: 'text',
+            inputPlaceholder: 'Escribe tu respuesta...',
+            allowOutsideClick: false,
+            allowEscapeKey: false,
+            showCancelButton: false,
+            confirmButtonText: 'Siguiente',
+            customClass: {
+                confirmButton: 'btn-siguiente-abajo'
+            }
+        });
+
+        if (result.isDismissed || result.value === null || result.value.trim() === '') {
+            Swal.fire('Debes responder esta pregunta para continuar.', '', 'warning');
+            return;
+        }
+
+        respuestas[clave] = result.value.trim();
+    }
+  
+    console.log("Respuestas:", respuestas);
+  
+    let resumen = '';
+    for (const clave of clavesSeleccionadas) {
+        resumen += `<b>${preguntas[clave].pregunta || preguntas[clave].question}</b><br>${respuestas[clave]}<br><br>`;
+    }
+  
+    Swal.fire({
+        title: "Finalizar",
+        html: resumen,
+        showConfirmButton: true,
+        confirmButtonText: "OK",
+        allowOutsideClick: false,
+        allowEscapeKey: false,
+        timer: 3000 // La alerta se cerrará después de 3000 ms (3 segundos)
+    }).then((result) => {
+        if (result.isConfirmed || result.dismiss === Swal.DismissReason.timer) { // Se ejecuta si se cierra por el timer o al hacer clic en OK
+            const textoQR = JSON.stringify(respuestas);
+            const qrContainer = document.getElementById("qrcode");
+    
+            if (qrContainer) {
+                qrContainer.innerHTML = ''; // Limpiar QR previo
+                new QRCode(qrContainer, {
+                    text: textoQR,
+                    width: 256,
+                    height: 256
+                });
+            } else {
+                console.error("El contenedor #qrcode no existe en el DOM.");
+            }
+    
+            document.getElementById("contenido").style.display = "none";
+            document.getElementById("exito").style.display = "block";
+        }
+    });
+    
 }
+
+
+
 
 function mostrarAlerta() {
   const paisSeleccionado = document.getElementById('paisSelect').value;
